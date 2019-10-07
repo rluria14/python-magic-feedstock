@@ -15,9 +15,8 @@ source:
     - discover-libmagic-dylib.patch  # [osx]
 
 build:
-  number: 1001
-  script: python -m pip install --no-deps --ignore-installed .
-  skip: True  # [win]
+  number: 1002
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -41,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - rluria14
